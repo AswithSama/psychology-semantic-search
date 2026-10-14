@@ -16,6 +16,8 @@ def test_persistent_chromadb_roundtrip(tmp_path):
     class ToyEmbedding:
         def __call__(self, input):
             return [[float(len(text) % 7), float(sum(map(ord, text)) % 11), 1.0] for text in input]
+        def embed_query(self, input):
+            return self.__call__(input)
         def name(self):
             return "toy-embedding"
         def get_config(self):
@@ -23,6 +25,8 @@ def test_persistent_chromadb_roundtrip(tmp_path):
         @staticmethod
         def build_from_config(config):
             return ToyEmbedding()
+
+
 
     path = tmp_path / "vectors"
     config = AppSettings(chroma_path=path, collection_name="toy_psych")
