@@ -1,0 +1,15 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data:ro
+      - ./chroma_store:/app/chroma_store
+      - ./model_cache:/app/model_cache
+    environment:
+      PSYCH_CHROMA_PATH: /app/chroma_store
+      HF_HOME: /app/model_cache
+      PSYCH_COLLECTION_NAME: psych_book_sections
+      PSYCH_EMBEDDING_MODEL: all-MiniLM-L6-v2
+    restart: unless-stopped

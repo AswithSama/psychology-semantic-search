@@ -1,0 +1,14 @@
+.git
+.github
+.venv
+__pycache__
+.pytest_cache
+tests
+notebooks
+data
+chroma_store
+model_cache
+*.pdf
+*.db
+.env
+.env.*
