@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.env
+.env.*
+!.env.example
+chroma_store/
+data/
+*.pdf
+*.db
+.DS_Store
