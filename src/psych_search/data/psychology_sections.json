@@ -1,0 +1,445 @@
+{
+  "source": "psychology_book.pdf",
+  "sections": [
+    {
+      "section_id": "1.1",
+      "heading": "1.1 What Is Psychology?",
+      "pages": 20
+    },
+    {
+      "section_id": "1.2",
+      "heading": "1.2 History of Psychology",
+      "pages": 21
+    },
+    {
+      "section_id": "1.3",
+      "heading": "1.3 Contemporary Psychology",
+      "pages": 30
+    },
+    {
+      "section_id": "1.4",
+      "heading": "1.4 Careers in Psychology",
+      "pages": "38-41"
+    },
+    {
+      "section_id": "2.1",
+      "heading": "2.1 Why Is Research Important?",
+      "pages": 48
+    },
+    {
+      "section_id": "2.2",
+      "heading": "2.2 Approaches to Research",
+      "pages": 53
+    },
+    {
+      "section_id": "2.3",
+      "heading": "2.3 Analyzing Findings",
+      "pages": 60
+    },
+    {
+      "section_id": "2.4",
+      "heading": "2.4 Ethics",
+      "pages": "71-74"
+    },
+    {
+      "section_id": "3.1",
+      "heading": "3.1 Human Genetics",
+      "pages": 84
+    },
+    {
+      "section_id": "3.2",
+      "heading": "3.2 Cells of the Nervous System",
+      "pages": 90
+    },
+    {
+      "section_id": "3.3",
+      "heading": "3.3 Parts of the Nervous System",
+      "pages": 96
+    },
+    {
+      "section_id": "3.4",
+      "heading": "3.4 The Brain and Spinal Cord",
+      "pages": 98
+    },
+    {
+      "section_id": "3.5",
+      "heading": "3.5 The Endocrine System",
+      "pages": "109-111"
+    },
+    {
+      "section_id": "4.1",
+      "heading": "4.1 What Is Consciousness?",
+      "pages": 122
+    },
+    {
+      "section_id": "4.2",
+      "heading": "4.2 Sleep and Why We Sleep",
+      "pages": 126
+    },
+    {
+      "section_id": "4.3",
+      "heading": "4.3 Stages of Sleep",
+      "pages": 129
+    },
+    {
+      "section_id": "4.4",
+      "heading": "4.4 Sleep Problems and Disorders",
+      "pages": 133
+    },
+    {
+      "section_id": "4.5",
+      "heading": "4.5 Substance Use and Abuse",
+      "pages": 138
+    },
+    {
+      "section_id": "4.6",
+      "heading": "4.6 Other States of Consciousness",
+      "pages": "146-148"
+    },
+    {
+      "section_id": "5.1",
+      "heading": "5.1 Sensation versus Perception",
+      "pages": 158
+    },
+    {
+      "section_id": "5.2",
+      "heading": "5.2 Waves and Wavelengths",
+      "pages": 161
+    },
+    {
+      "section_id": "5.3",
+      "heading": "5.3 Vision",
+      "pages": 165
+    },
+    {
+      "section_id": "5.4",
+      "heading": "5.4 Hearing",
+      "pages": 173
+    },
+    {
+      "section_id": "5.5",
+      "heading": "5.5 The Other Senses",
+      "pages": 176
+    },
+    {
+      "section_id": "5.6",
+      "heading": "5.6 Gestalt Principles of Perception",
+      "pages": "180-183"
+    },
+    {
+      "section_id": "6.1",
+      "heading": "6.1 What Is Learning?",
+      "pages": 194
+    },
+    {
+      "section_id": "6.2",
+      "heading": "6.2 Classical Conditioning",
+      "pages": 195
+    },
+    {
+      "section_id": "6.3",
+      "heading": "6.3 Operant Conditioning",
+      "pages": 204
+    },
+    {
+      "section_id": "6.4",
+      "heading": "6.4 Observational Learning (Modeling)",
+      "pages": "215-216"
+    },
+    {
+      "section_id": "7.1",
+      "heading": "7.1 What Is Cognition?",
+      "pages": 226
+    },
+    {
+      "section_id": "7.2",
+      "heading": "7.2 Language",
+      "pages": 230
+    },
+    {
+      "section_id": "7.3",
+      "heading": "7.3 Problem Solving",
+      "pages": 234
+    },
+    {
+      "section_id": "7.4",
+      "heading": "7.4 What Are Intelligence and Creativity?",
+      "pages": 240
+    },
+    {
+      "section_id": "7.5",
+      "heading": "7.5 Measures of Intelligence",
+      "pages": 243
+    },
+    {
+      "section_id": "7.6",
+      "heading": "7.6 The Source of Intelligence",
+      "pages": "249-252"
+    },
+    {
+      "section_id": "8.1",
+      "heading": "8.1 How Memory Functions",
+      "pages": 260
+    },
+    {
+      "section_id": "8.2",
+      "heading": "8.2 Parts of the Brain Involved with Memory",
+      "pages": 267
+    },
+    {
+      "section_id": "8.3",
+      "heading": "8.3 Problems with Memory",
+      "pages": 271
+    },
+    {
+      "section_id": "8.4",
+      "heading": "8.4 Ways to Enhance Memory",
+      "pages": "281-284"
+    },
+    {
+      "section_id": "9.1",
+      "heading": "9.1 What Is Lifespan Development?",
+      "pages": 292
+    },
+    {
+      "section_id": "9.2",
+      "heading": "9.2 Lifespan Theories",
+      "pages": 296
+    },
+    {
+      "section_id": "9.3",
+      "heading": "9.3 Stages of Development",
+      "pages": 304
+    },
+    {
+      "section_id": "9.4",
+      "heading": "9.4 Death and Dying",
+      "pages": "325-326"
+    },
+    {
+      "section_id": "10.1",
+      "heading": "10.1 Motivation",
+      "pages": 334
+    },
+    {
+      "section_id": "10.2",
+      "heading": "10.2 Hunger and Eating",
+      "pages": 340
+    },
+    {
+      "section_id": "10.3",
+      "heading": "10.3 Sexual Behavior",
+      "pages": 346
+    },
+    {
+      "section_id": "10.4",
+      "heading": "10.4 Emotion",
+      "pages": "354-364"
+    },
+    {
+      "section_id": "11.1",
+      "heading": "11.1 What Is Personality?",
+      "pages": 372
+    },
+    {
+      "section_id": "11.2",
+      "heading": "11.2 Freud and the Psychodynamic Perspective",
+      "pages": 374
+    },
+    {
+      "section_id": "11.3",
+      "heading": "11.3 Neo-Freudians: Adler, Erikson, Jung, and Horney",
+      "pages": 380
+    },
+    {
+      "section_id": "11.4",
+      "heading": "11.4 Learning Approaches",
+      "pages": 385
+    },
+    {
+      "section_id": "11.5",
+      "heading": "11.5 Humanistic Approaches",
+      "pages": 389
+    },
+    {
+      "section_id": "11.6",
+      "heading": "11.6 Biological Approaches",
+      "pages": 390
+    },
+    {
+      "section_id": "11.7",
+      "heading": "11.7 Trait Theorists",
+      "pages": 391
+    },
+    {
+      "section_id": "11.8",
+      "heading": "11.8 Cultural Understandings of Personality",
+      "pages": 396
+    },
+    {
+      "section_id": "11.9",
+      "heading": "11.9 Personality Assessment",
+      "pages": "398-402"
+    },
+    {
+      "section_id": "12.1",
+      "heading": "12.1 What Is Social Psychology?",
+      "pages": 412
+    },
+    {
+      "section_id": "12.2",
+      "heading": "12.2 Self-presentation",
+      "pages": 418
+    },
+    {
+      "section_id": "12.3",
+      "heading": "12.3 Attitudes and Persuasion",
+      "pages": 421
+    },
+    {
+      "section_id": "12.4",
+      "heading": "12.4 Conformity, Compliance, and Obedience",
+      "pages": 427
+    },
+    {
+      "section_id": "12.5",
+      "heading": "12.5 Prejudice and Discrimination",
+      "pages": 434
+    },
+    {
+      "section_id": "12.6",
+      "heading": "12.6 Aggression",
+      "pages": 441
+    },
+    {
+      "section_id": "12.7",
+      "heading": "12.7 Prosocial Behavior",
+      "pages": "444-448"
+    },
+    {
+      "section_id": "13.1",
+      "heading": "13.1 What Is Industrial and Organizational Psychology?",
+      "pages": 460
+    },
+    {
+      "section_id": "13.2",
+      "heading": "13.2 Industrial Psychology: Selecting and Evaluating Employees",
+      "pages": 468
+    },
+    {
+      "section_id": "13.3",
+      "heading": "13.3 Organizational Psychology: The Social Dimension of Work",
+      "pages": 479
+    },
+    {
+      "section_id": "13.4",
+      "heading": "13.4 Human Factors Psychology and Workplace Design",
+      "pages": "489-491"
+    },
+    {
+      "section_id": "14.1",
+      "heading": "14.1 What Is Stress?",
+      "pages": 498
+    },
+    {
+      "section_id": "14.2",
+      "heading": "14.2 Stressors",
+      "pages": 508
+    },
+    {
+      "section_id": "14.3",
+      "heading": "14.3 Stress and Illness",
+      "pages": 514
+    },
+    {
+      "section_id": "14.4",
+      "heading": "14.4 Regulation of Stress",
+      "pages": 526
+    },
+    {
+      "section_id": "14.5",
+      "heading": "14.5 The Pursuit of Happiness",
+      "pages": "533-540"
+    },
+    {
+      "section_id": "15.1",
+      "heading": "15.1 What Are Psychological Disorders?",
+      "pages": 550
+    },
+    {
+      "section_id": "15.2",
+      "heading": "15.2 Diagnosing and Classifying Psychological Disorders",
+      "pages": 554
+    },
+    {
+      "section_id": "15.3",
+      "heading": "15.3 Perspectives on Psychological Disorders",
+      "pages": 557
+    },
+    {
+      "section_id": "15.4",
+      "heading": "15.4 Anxiety Disorders",
+      "pages": 560
+    },
+    {
+      "section_id": "15.5",
+      "heading": "15.5 Obsessive-Compulsive and Related Disorders",
+      "pages": 566
+    },
+    {
+      "section_id": "15.6",
+      "heading": "15.6 Posttraumatic Stress Disorder",
+      "pages": 570
+    },
+    {
+      "section_id": "15.7",
+      "heading": "15.7 Mood and Related Disorders",
+      "pages": 572
+    },
+    {
+      "section_id": "15.8",
+      "heading": "15.8 Schizophrenia",
+      "pages": 582
+    },
+    {
+      "section_id": "15.9",
+      "heading": "15.9 Dissociative Disorders",
+      "pages": 586
+    },
+    {
+      "section_id": "15.10",
+      "heading": "15.10 Disorders in Childhood",
+      "pages": 588
+    },
+    {
+      "section_id": "15.11",
+      "heading": "15.11 Personality Disorders",
+      "pages": "594-600"
+    },
+    {
+      "section_id": "16.1",
+      "heading": "16.1 Mental Health Treatment: Past and Present",
+      "pages": 612
+    },
+    {
+      "section_id": "16.2",
+      "heading": "16.2 Types of Treatment",
+      "pages": 617
+    },
+    {
+      "section_id": "16.3",
+      "heading": "16.3 Treatment Modalities",
+      "pages": 629
+    },
+    {
+      "section_id": "16.4",
+      "heading": "16.4 Substance-Related and Addictive Disorders: A Special Case",
+      "pages": 633
+    },
+    {
+      "section_id": "16.5",
+      "heading": "16.5 The Sociocultural Model and Therapy Utilization",
+      "pages": "635-638"
+    }
+  ]
+}
