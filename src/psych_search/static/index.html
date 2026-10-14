@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Psychology | Semantic Search</title>
+  <style>
+    :root { font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color-scheme: dark;
+      --bg:#0b1120;--panel:#151f32;--muted:#a9b8cc;--border:#324158;--accent:#7dd3fc;--text:#e8eef6; }
+    * { box-sizing:border-box; }
+    body { margin:0;background:radial-gradient(ellipse at 20% 0%,#14283c 0%,var(--bg) 60%);color:var(--text); }
+    main { max-width:1000px;margin:0 auto;padding:64px 22px; }
+    .eyebrow { color:var(--accent);letter-spacing:.17em;text-transform:uppercase;font-size:12px;font-weight:750; }
+    h1 { font-size:clamp(32px,6vw,54px);letter-spacing:-.04em;line-height:1.08;margin:12px 0; }
+    h2 { margin:0;font-size:19px; }
+    p { line-height:1.65; }
+    .subtitle { color:var(--muted);max-width:660px; }
+    .panel { background:var(--panel);border:1px solid var(--border);border-radius:18px;padding:23px;margin-top:28px; }
+    label {display:block;font-weight:600;font-size:13px;margin-bottom:8px;color:#d2ddef;}
+    input,select,button {font:inherit;border-radius:10px;}
+    input,select { background:#0c1728;border:1px solid var(--border);color:var(--text);padding:13px;width:100%; }
+    input:focus,select:focus {outline:2px solid var(--accent);outline-offset:1px;}
+    .formrow { display:grid;grid-template-columns:2fr .8fr .8fr;gap:14px;align-items:end; }
+    button { background:var(--accent);border:0;color:#062236;font-weight:750;padding:13px 23px;cursor:pointer;margin-top:15px; }
+    button:disabled {opacity:.5;cursor:progress;}
+    .status {color:var(--muted);min-height:1.8em;margin-top:15px;}
+    .hit {background:var(--panel);border:1px solid var(--border);padding:21px;border-radius:15px;margin-top:16px;}
+    .hitheader {display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+    .meta {color:var(--accent);font-size:13px;font-weight:650;}
+    .hit p {white-space:pre-wrap;color:#d9e4f1;margin-bottom:0;}
+    .minor {color:var(--muted);font-size:12px;}
+    .error {color:#fda4af;}
+    @media(max-width:720px){main{padding-top:38px}.formrow{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">Section-aware retrieval system</div>
+    <h1>Search your psychology textbook.</h1>
+    <p class="subtitle">Discover relevant textbook passages through semantic embeddings, with chapter, section, and page citations. Results are retrieved excerpts—not AI-generated answers.</p>
+    <section class="panel" aria-label="Search textbook">
+      <form id="searchform">
+        <div class="formrow">
+          <div><label for="query">Your question</label><input id="query" name="query" placeholder="What is operant conditioning?" maxlength="1000" required autofocus /></div>
+          <div><label for="chapter">Chapter (optional)</label><input id="chapter" name="chapter" type="number" min="1" max="16" placeholder="All" /></div>
+          <div><label for="count">Results</label><select id="count" name="count"><option>3</option><option selected>5</option><option>10</option></select></div>
+        </div>
+        <button id="submit" type="submit">Search passages →</button>
+      </form>
+      <div class="status" id="status" role="status" aria-live="polite">Checking index…</div>
+    </section>
+    <section id="results" aria-label="Search results" aria-live="polite"></section>
+  </main>
+<script>
+  const form = document.getElementById('searchform');
+  const status = document.getElementById('status');
+  const results = document.getElementById('results');
+  const submit = document.getElementById('submit');
+  fetch('/api/stats').then(r => {if(!r.ok) throw Error('not available');return r.json()})
+    .then(d => {status.textContent = d.indexed_chunks ? `${d.indexed_chunks.toLocaleString()} indexed passages ready.` : 'The index is empty. Run the indexing CLI first.';})
+    .catch(() => {status.textContent = 'Index not ready. Verify the ChromaDB path and embedding model.';});
+  form.addEventListener('submit', async event => {
+    event.preventDefault();results.replaceChildren();submit.disabled = true;
+    const query = document.getElementById('query').value.trim();
+    const chapterText = document.getElementById('chapter').value;
+    status.textContent = 'Searching…';status.classList.remove('error');
+    try {
+      const body = {query,k:Number(document.getElementById('count').value)};
+      if(chapterText) body.chapter = Number(chapterText);
+      const response = await fetch('/api/search', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+      const data = await response.json();
+      if(!response.ok) throw Error(typeof data.detail === 'string' ? data.detail : 'Search failed.');
+      status.textContent = data.count ? `Found ${data.count} relevant passages.` : 'No passages found. Check that the textbook has been indexed.';
+      for(const [index,hit] of data.hits.entries()) {
+        const article = document.createElement('article');article.className='hit';
+        const header = document.createElement('div');header.className='hitheader';
+        const heading = document.createElement('h2');heading.textContent=`${index+1}. ${hit.metadata.section_heading || 'Textbook passage'}`;
+        const description = document.createElement('span');description.className='meta';
+        description.textContent = `Ch. ${hit.metadata.chapter_id ?? '?'} · § ${hit.metadata.section_id ?? '?'} · p. ${hit.metadata.start_page ?? '?'}–${hit.metadata.end_page ?? '?'} `;
+        const excerpt = document.createElement('p');excerpt.textContent=hit.text;
+        const footer = document.createElement('p');footer.className='minor';footer.textContent=`Cosine distance: ${Number(hit.distance).toFixed(4)} · Source: ${hit.metadata.source || 'textbook'}`;
+        header.append(heading,description);article.append(header,excerpt,footer);results.append(article);
+      }
+    } catch(error) {status.textContent=error.message;status.classList.add('error');}
+    finally {submit.disabled=false;}
+  });
+</script>
+</body>
+</html>
