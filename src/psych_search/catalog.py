@@ -5,7 +5,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
-DEFAULT_CATALOG = Path(__file__).resolve().parents[2] / "config" / "psychology_sections.json"
+DEFAULT_CATALOG = Path(__file__).resolve().parent / "data" / "psychology_sections.json"
 
 
 @dataclass(frozen=True)
